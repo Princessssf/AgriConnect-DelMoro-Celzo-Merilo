@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>AgriConnect</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@1&display=swap" rel="stylesheet">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  
+  <header>
+    <img src="logo.png" alt="AgriConnect">
+    <nav class="navigation">
+      <form action="" method="get">
+        <input type="text" name="search" id="search" placeholder="search">
+      </form>
+      <button>
+        <i class='bx bx-message'></i>
+        <p>Inbox</p>
+      </button>
+      <button>
+        <i class='bx bx-slider'></i>
+        <p>Setting</p>
+      </button>
+    </nav>
+  </header>
+  <main>
+    <nav>
+      <div class="navigation">
+        <button data-target="home" class="active">
+          <i class='bx bx-home'></i>
+          <p>Home</p>
+        </button>
+        <button data-target="feedback">
+          <i class='bx bx-message-detail'></i>
+          <p>Feedback</p>
+        </button>
+        <button data-target="about">
+          <i class='bx bx-info-circle'></i>
+          <p>About</p>
+        </button>
+      </div>
+    </nav>
+    <!--MAIN CONTENT SECTION-->
+    <section id="home" class="page active">
+      <header style="background-image: url(https://as1.ftcdn.net/v2/jpg/11/07/95/44/1000_F_1107954441_EjWGEaVtVGZj2qAmSgw69IctVgTAbyxW.jpg);">
+        <h1 class="text">AgriConnect</h1>
+        <p class="text-muted">"Connecting Farmers, Growing Futures"</p>
+      </header>
+      
+      <article class="post">
+        <h3 class="text">Posts</h3>
+        <p class="text">
+          content
+        </p>
+      </article>
+    </section>
+
+    <section id="feedback" class="page">
+      <form action="submit.php" method="post">
+        <h1>Feedback</h1>
+
+        <input type="text" name="username" id="username" placeholder="Username">
+        <textarea placeholder="Write your comment here..." rows="4" cols="50"></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+
+    <section id="about" class="page">
+      <article>
+        <h1>About Us</h1>
+        <p>
+          AgriConnect is a platform that brigdes farmers and buyers by providing direct access to products, fair trade opportunities, and sustainable market practices.
+          Our mission is to empower local farmers while ensuring buyers get fresh and affordable produce.
+        </p>
+      </article>
+      <article class="services">
+        <h1>Our Services</h1>
+          <ul>
+            <li>Direct farmer-to-buyer marketplace</li>
+            <li>Fair pricing and transparent transactions</li>
+            <li>Educational resources for farmers</li>
+          </ul>
+      </article>
+    </section>
+
+    <aside>
+      Related Contents
+    </aside>
+  </main>
+
+  <footer>
+    <p>© 2025 AgriConnect | Empowering Farmers and Consumers</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

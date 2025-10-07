@@ -1,0 +1,291 @@
+:root {
+  --color-primary: hsl(120, 30%, 30%);
+  --color-secondary: hsl(120, 30%, 40%);
+
+  --color-background: hsl(0, 0%, 95%);
+  --color-background-muted: hsl(0, 0%, 90%);
+  --color-background-highlight: hsl(0, 0%, 85%);
+
+  --color-text: hsl(0, 0%, 0%);
+  --color-text-muted: hsl(0, 0%, 10%);
+  --color-text-highlight: hsl(0, 0%, 20%);
+
+  --transition-3s: 0.3s;
+}
+
+* {
+  font-family: 'Cabinet Grotesk', sans-serif;
+}
+
+h1 {
+  font-size: clamp(1.5rem, 5vw, 2rem);
+}
+
+p {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+}
+
+.text {
+  color: var(--color-text);
+}
+
+.text-muted {
+  color: var(--color-text-muted);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  gap: clamp(0.3rem, 1.5vw, 0.5rem);
+  background-color: var(--color-background);
+}
+
+/* HEADER */
+
+header {
+  position: sticky;
+  display: flex;
+  justify-content: space-between;
+  top: 0;
+  padding: 0 1rem;
+  background-color: var(--color-primary);
+}
+
+header img {
+  max-height: 4rem;
+}
+
+header .navigation {
+  display: flex;
+  padding: 0.5em 0;
+  gap: 0.5rem;
+}
+
+header .navigation form {
+  display: flex;
+  padding: 0.6em 0;
+}
+
+header .navigation form input {
+  border: none;
+  border-radius: 14px;
+  outline: none;
+  padding: 0 1rem;
+}
+
+header .navigation button {
+  justify-content: center;
+  width: 3rem;
+  max-height: 3rem;
+  font-weight: 600;
+  border: 0;
+  border-radius: 4px;
+  gap: 0.5rem;
+  color: var(--color-background);
+  background-color: transparent;
+  transition: var(--transition-3s);
+}
+
+header .navigation button:hover {
+  display: flex;
+  width: 6rem;
+  background: var(--color-secondary);
+}
+
+header .navigation button i {
+  font-size: clamp(0.8rem,  2vw, 1rem);
+}
+
+header .navigation button p {
+  display: none;
+  font-size: clamp(0.8rem,  2vw, 1rem);
+}
+
+header .navigation button:hover p {
+  display: flex;
+}
+
+.navigation button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* MAIN */
+
+main {
+  flex: 1;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  gap: clamp(0.3rem, 1.5vw, 0.5rem);
+}
+
+/* MAIN NAVIGATION */
+
+main nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1em;
+  background-color: var(--color-background-muted);
+}
+
+main nav .navigation {
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  gap: 0.5rem;
+  background-color: transparent;
+}
+
+main nav .navigation button {
+  display: flex;
+  padding: 0 2em;
+  border: 0;
+  border-radius: 8px;
+  color: var(--color-text);
+  background-color: transparent;
+}
+
+main nav .navigation button:hover {
+  background-color: var(--color-background-highlight);
+}
+
+main nav .navigation button.active {
+  background-color: var(--color-background-highlight);
+}
+
+main .navigation button i {
+  font-size: clamp(1.2rem,  2vw, 1.4rem);
+}
+
+main .navigation button p {
+  font-size: clamp(0.8rem,  2vw, 1rem);
+}
+
+
+/* MAIN  CONTENT SECTION */
+
+main .page {
+  flex: 3;
+  display: none;
+  flex-direction: column;
+  padding: 0.5em;
+  background-color: var(--color-background-muted);
+}
+
+main .active {
+  display: flex;
+}
+
+main .page header {
+  position: static;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1em;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: var(--color-background-muted);
+}
+
+main .page header h1 {
+  color: var(--color-background);
+  text-shadow: 2px 2px 2px black;
+}
+
+main .page header p {
+  font-style: italic;
+  font-weight: bold;
+  color: var(--color-background);
+  text-shadow: 2px 2px 2px black;
+}
+
+main .page article {
+  text-align: justify;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+}
+
+main .page .services {
+  display: flex;
+  justify-content: center;
+}
+
+main .page form {
+  display: flex;
+  flex-direction: column;
+  margin: 2em;
+  gap: 1em;
+}
+
+main .page form input,
+main .page form textarea,
+main .page form button {
+  outline: none;
+  border: 1px solid grey;
+  border-radius: 8px;
+  padding: 0.5em 1em ;
+}
+/* MAIN ASIDE */
+
+main aside {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1em;
+  background-color: var(--color-background-muted);
+}
+
+/* FOOTER */
+
+footer {
+  display: flex;
+  justify-content: center;
+  padding: 0em 1em;
+  background-color: var(--color-background-muted);
+}
+
+footer p {
+  font-size: clamp(1rem, 3vw, 1.2rem);
+  color: var(--color-text-muted);
+}
+
+
+/* PHONE SCREEN WIDTH 768PX */
+
+@media (max-width: 768px) {
+
+  main {
+    flex-direction: column;
+  }
+
+  main nav {
+    padding: 0 1em;
+    justify-content: center;
+  }
+
+  main nav .navigation {
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    padding: 0.3em;
+  }
+
+  main nav .navigation button {
+    justify-content: center;
+    width: 100%;
+  }
+
+  main aside {
+    display: none;
+  }
+}
