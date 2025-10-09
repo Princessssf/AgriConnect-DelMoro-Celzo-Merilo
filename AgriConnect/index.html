@@ -6,7 +6,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@1&display=swap" rel="stylesheet">
-  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Symbols+Rounded" />
   <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -16,14 +16,17 @@
     <img src="logo.png" alt="AgriConnect">
     <nav class="navigation">
       <form action="" method="get">
-        <input type="text" name="search" id="search" placeholder="search">
+        <div class="search">
+          <i class="search-icon material-symbols-rounded">search</i>
+          <input class="search-input" type="text" name="search" id="search" placeholder="Search">
+        </div>
       </form>
       <button>
-        <i class='bx bx-message'></i>
+        <i class="material-symbols-rounded">chat</i>
         <p>Inbox</p>
       </button>
       <button>
-        <i class='bx bx-slider'></i>
+        <i class='material-symbols-rounded'>settings</i>
         <p>Settings</p>
       </button>
     </nav>
@@ -32,15 +35,15 @@
     <nav>
       <div class="navigation">
         <button data-target="home" class="active">
-          <i class='bx bx-home'></i>
+          <i class='material-symbols-rounded'>home</i>
           <p>Home</p>
         </button>
         <button data-target="feedback">
-          <i class='bx bx-message-detail'></i>
+          <i class='material-symbols-rounded'>feedback</i>
           <p>Feedback</p>
         </button>
         <button data-target="about">
-          <i class='bx bx-info-circle'></i>
+          <i class='material-symbols-rounded'>info</i>
           <p>About</p>
         </button>
       </div>
