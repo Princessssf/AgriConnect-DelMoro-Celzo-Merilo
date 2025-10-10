@@ -2,7 +2,8 @@ const buttons = document.querySelectorAll('.navigation button');
 const pages = document.querySelectorAll('.page');
 
 buttons.forEach(btn => {
-  btn.addEventListener('click', () => 
+  btn.addEventListener('click', () => {
+    buttons.forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
 
     pages.forEach(p => p.classList.remove('active'));
