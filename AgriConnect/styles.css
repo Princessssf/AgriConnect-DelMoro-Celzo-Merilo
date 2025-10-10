@@ -321,3 +321,64 @@ footer p {
     display: none;
   }
 }
+
+.homepage-intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  padding: 2rem 1rem;
+  margin: 1rem auto;
+  background-color: var(--color-background-highlight);
+  border-radius: 12px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.15);
+  transition: transform var(--transition-3s);
+}
+
+.homepage-intro:hover {
+  transform: scale(1.01);
+}
+
+.homepage-intro h2 {
+  color: var(--color-primary);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  margin-bottom: 0.5rem;
+}
+
+.homepage-intro p {
+  color: var(--color-text-muted);
+  max-width: 600px;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  margin-bottom: 1rem;
+}
+
+.user-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.user-buttons button {
+  padding: 0.7rem 1.5rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: var(--transition-3s);
+}
+
+.farmer-btn {
+  background-color: var(--color-primary);
+  color: var(--color-background);
+}
+
+.buyer-btn {
+  background-color: var(--color-secondary);
+  color: var(--color-background);
+}
+
+.user-buttons button:hover {
+  opacity: 0.9;
+}
