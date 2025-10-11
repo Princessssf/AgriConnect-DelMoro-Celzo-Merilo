@@ -28,15 +28,6 @@ p {
   font-size: clamp(1.2rem, 2vw, 1.4rem);
 }
 
-button {
-  cursor: pointer;
-}
-
-form input,
-form textarea {
-  cursor: text;
-}
-
 .text {
   color: var(--color-text);
 }
@@ -49,7 +40,6 @@ body {
   display: flex;
   flex-direction: column;
   width: 100%;
-  min-height: 100vh;
   margin: 0;
   padding: 0;
   gap: clamp(0.3rem, 1.5vw, 0.5rem);
@@ -160,6 +150,7 @@ header .navigation button:hover p {
 
 main {
   flex: 1;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   gap: clamp(0.3rem, 1.5vw, 0.5rem);
@@ -256,81 +247,16 @@ main .page article {
   padding: 1em;
 }
 
-/* MAIN INTRO SECTION */
-
-main .page .intro-section {
-  flex: 1 1;
+main .page .services {
   display: flex;
   justify-content: center;
-  align-items: center;
-  text-align: center;
-  flex-direction: column;
-  max-height: 400px;
-  padding: 1rem;
-  margin: 1rem 0.5rem;
-  background-color: var(--color-background-highlight);
-  border-radius: 8px;
-  box-shadow: 0 0 6px rgba(0,0,0,0.15);
-  transition: transform var(--transition-3s);
 }
-
-main .page .intro-section:hover {
-  transform: scale(1.01);
-}
-
-main .page .intro-section h2 {
-  color: var(--color-primary);
-  font-size: clamp(1.5rem, 3vw, 2rem);
-  margin-bottom: 0.5rem;
-}
-
-main .page .intro-section p {
-  color: var(--color-text-muted);
-  max-width: 600px;
-  font-size: clamp(1rem, 2vw, 1.2rem);
-  margin-bottom: 1rem;
-}
-
-main .page .intro-section .user-buttons {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-main .page .intro-section .user-buttons button {
-  padding: 0.7rem 1.5rem;
-  font-weight: bold;
-  border: none;
-  border-radius: 8px;
-  transition: var(--transition-3s);
-}
-
-main .page .intro-section .farmer-button {
-  background-color: var(--color-primary);
-  color: var(--color-background);
-}
-
-main .page .intro-section .buyer-button {
-  background-color: var(--color-secondary);
-  color: var(--color-background);
-}
-
-main .page .intro .user-buttons button:hover {
-  opacity: 0.9;
-}
-
-/* MAIN FEEDBACK FORM SECTION */
 
 main .page form {
   display: flex;
   flex-direction: column;
-  padding: 2rem;
-  margin: 1rem;
-  gap: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 0 6px rgba(0,0,0,0.15);
-  background-color: var(--color-background-highlight);
+  margin: 2em;
+  gap: 1em;
 }
 
 main .page form input,
@@ -341,14 +267,6 @@ main .page form button {
   border-radius: 8px;
   padding: var(--padding-05) var(--padding-1) ;
 }
-
-/* MAIN ABOUT SECTION */
-
-main .page .services {
-  display: flex;
-  justify-content: center;
-}
-
 /* MAIN ASIDE */
 
 main aside {
@@ -402,4 +320,162 @@ footer p {
   main aside {
     display: none;
   }
+}
+
+.homepage-intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  padding: 2rem 1rem;
+  margin: 1rem auto;
+  background-color: var(--color-background-highlight);
+  border-radius: 12px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.15);
+  transition: transform var(--transition-3s);
+}
+
+.homepage-intro:hover {
+  transform: scale(1.01);
+}
+
+.homepage-intro h2 {
+  color: var(--color-primary);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  margin-bottom: 0.5rem;
+}
+
+.homepage-intro p {
+  color: var(--color-text-muted);
+  max-width: 600px;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  margin-bottom: 1rem;
+}
+
+.user-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.user-buttons button {
+  padding: 0.7rem 1.5rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: var(--transition-3s);
+}
+
+.farmer-btn {
+  background-color: var(--color-primary);
+  color: var(--color-background);
+}
+
+.buyer-btn {
+  background-color: var(--color-secondary);
+  color: var(--color-background);
+}
+
+.user-buttons button:hover {
+  opacity: 0.9;
+}
+
+/* ===== MODALS ===== */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.4);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: var(--color-background);
+  padding: 1.5rem;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.modal .close {
+  float: right;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.inbox-messages {
+  text-align: left;
+  margin-top: 1rem;
+  border-top: 1px solid #ccc;
+  padding-top: 1rem;
+}
+
+/* ===== GREEN DARK MODE ===== */
+body.dark {
+  --color-primary: #2e7d32;
+  --color-secondary: #43a047;
+  --color-background: #1b3a1b;
+  --color-background-muted: #2e4e2e;
+  --color-background-highlight: #356b35;
+  --color-text: #ffffff;
+  --color-text-muted: #d8f8d8;
+}
+
+body.dark header {
+  background-color: var(--color-primary);
+}
+
+body.dark footer {
+  background-color: var(--color-background-muted);
+  color: var(--color-text-muted);
+}
+
+body.dark .homepage-intro {
+  background-color: var(--color-background-highlight);
+}
+
+body.dark .modal-content {
+  background-color: var(--color-background-muted);
+  color: var(--color-text);
+}
+
+/* ===== IMPROVED TEXT COLORS FOR GREEN DARK MODE ===== */
+body.dark h1,h2,h3,h4,p,label,li,a,span,strong {
+  color: var(--color-text);
+}
+
+body.dark .text-muted,
+body.dark .text {
+  color: var(--color-text-muted);
+}
+
+/* Buttons in dark mode */
+body.dark button {
+  background-color: var(--color-secondary);
+  color: #fff;
+  border: none;
+}
+
+body.dark button:hover {
+  background-color: #4caf50;
+}
+
+/* Input fields in dark mode */
+body.dark input,
+body.dark textarea {
+  background-color: var(--color-background-highlight);
+  color: #fff;
+  border: 1px solid #5da35d;
+}
+
+body.dark input::placeholder,
+body.dark textarea::placeholder {
+  color: #d8f8d8;
 }

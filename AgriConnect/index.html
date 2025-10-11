@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <title>AgriConnect</title>
   <meta charset="UTF-8">
@@ -9,9 +8,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Symbols+Rounded" />
   <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-  
   <header>
     <img src="logo.png" alt="AgriConnect">
     <nav class="navigation">
@@ -21,16 +18,17 @@
           <input class="search-input" type="text" name="search" id="search" placeholder="Search">
         </div>
       </form>
-      <button>
+      <button id="inboxBtn">
         <i class="material-symbols-rounded">chat</i>
         <p>Inbox</p>
       </button>
-      <button>
+      <button id="settingsBtn">
         <i class='material-symbols-rounded'>settings</i>
         <p>Settings</p>
       </button>
     </nav>
   </header>
+
   <main>
     <nav>
       <div class="navigation">
@@ -48,32 +46,35 @@
         </button>
       </div>
     </nav>
-    <!--MAIN CONTENT SECTION-->
+
+    <!-- MAIN CONTENT -->
     <section id="home" class="page active">
       <header style="background-image: url(https://as1.ftcdn.net/v2/jpg/11/07/95/44/1000_F_1107954441_EjWGEaVtVGZj2qAmSgw69IctVgTAbyxW.jpg);">
         <h1 class="text">AgriConnect</h1>
         <p class="text-muted">"Connecting Farmers, Growing Futures"</p>
       </header>
-      <!-- INTRO SECTION -->
-      <section class="intro-section">
-        <h2>Welcome to AgriConnect</h2>
-          <p>
-            AgriConnect is your digital bridge between <strong>farmers</strong> and <strong>buyers</strong>.
-            Whether you grow fresh produce or seek high-quality agricultural goods, we make trading simple, fair, and direct.
-          </p>
+
+      <section class="homepage-intro">
+        <div class="intro-content">
+          <h2>Welcome to AgriConnect</h2>
+          <p>AgriConnect is your digital bridge between <strong>farmers</strong> and <strong>buyers</strong>.</p>
           <div class="user-buttons">
-            <button class="farmer-button">I’m a Farmer</button>
-            <button class="buyer-button">I’m a Buyer</button>
+            <button class="farmer-btn">I’m a Farmer</button>
+            <button class="buyer-btn">I’m a Buyer</button>
           </div>
+        </div>
       </section>
+
+      <article class="post">
+        <h3 class="text">Posts</h3>
+        <p class="text">content</p>
+      </article>
     </section>
 
     <section id="feedback" class="page">
       <form action="submit.php" method="post">
         <h1>Feedback</h1>
-
-        <input type="text" name="username" id="username" placeholder="Username">
-        <input type="text" name="password" id="password" placeholder="Password">
+        <input type="text" name="username" placeholder="Username">
         <textarea placeholder="Write your comment here..." rows="4" cols="50"></textarea>
         <button type="submit">Submit</button>
       </form>
@@ -82,29 +83,48 @@
     <section id="about" class="page">
       <article>
         <h1>About Us</h1>
-        <p>
-          AgriConnect is a platform that brigdes farmers and buyers by providing direct access to products, fair trade opportunities, and sustainable market practices.
-          Our mission is to empower local farmers while ensuring buyers get fresh and affordable produce.
-        </p>
+        <p>AgriConnect bridges farmers and buyers through fair trade and sustainability.</p>
       </article>
       <article class="services">
         <h1>Our Services</h1>
-          <ul>
-            <li>Direct farmer-to-buyer marketplace</li>
-            <li>Fair pricing and transparent transactions</li>
-            <li>Educational resources for farmers</li>
-          </ul>
+        <ul>
+          <li>Direct farmer-to-buyer marketplace</li>
+          <li>Fair pricing and transparent transactions</li>
+          <li>Educational resources for farmers</li>
+        </ul>
       </article>
     </section>
 
-    <aside>
-      Related Contents
-    </aside>
+    <aside>Related Contents</aside>
   </main>
 
   <footer>
     <p>© 2025 AgriConnect | Empowering Farmers and Consumers</p>
   </footer>
+
+  <!-- Inbox Modal -->
+  <div class="modal" id="inboxModal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Inbox</h2>
+      <div class="inbox-messages">
+        <p><strong>Howard D.:</strong> Hi! I'm interested in your rice offer.</p>
+        <p><strong>Marianne C.:</strong> Can I get the updated price list?</p>
+        <p><strong>Cess M.:</strong> Is your corn still available?</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Settings Modal -->
+  <div class="modal" id="settingsModal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Settings</h2>
+      <label>
+        <input type="checkbox" id="darkModeToggle"> Enable Green Dark Mode
+      </label>
+    </div>
+  </div>
 
   <script src="main.js"></script>
 </body>
